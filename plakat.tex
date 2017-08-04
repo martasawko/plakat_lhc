@@ -1,0 +1,127 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% a1poster Portrait Poster
+% LaTeX Template
+% Version 1.0 (22/06/13)
+%
+% The a0poster class was created by:
+% Gerlinde Kettl and Matthias Weiser (tex@kettl.de)
+% 
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[a1,portrait]{a0poster}
+
+%\usepackage{revtex4}
+\usepackage{multicol} % This is so we can have multiple columns of text side-by-side
+\columnsep=30pt % This is the amount of white space between the columns in the poster
+\columnseprule=1pt % This is the thickness of the black line between the columns in the poster
+\usepackage[usenames,dvipsnames]{xcolor}
+\definecolor{1}{RGB}{66,92,138}
+\definecolor{2}{RGB}{60,83,122}
+\definecolor{3}{RGB}{51,102,102}
+%\usepackage[svgnames]{xcolor} % Specify colors by their 'svgnames', for a full list of all colors available see here: http://www.latextemplates.com/svgnames-colors
+\usepackage{times} % Use the times font
+%\usepackage{palatino} % Uncomment to use the Palatino font
+\usepackage{graphicx} % Required for including images
+\graphicspath{{figures/}} % Location of the graphics files
+\usepackage{booktabs} % Top and bottom rules for table
+\usepackage[font=small,labelfont=bf]{caption} % Required for specifying captions to tables and figures
+\usepackage{amsfonts, amsmath, amsthm, amssymb} % For math fonts, symbols and environments
+\usepackage{wrapfig} 
+\usepackage[utf8]{inputenc}
+\let\babellll\lll
+\let\lll\relax
+\begin{document}
+
+\begin{minipage}[b]{0.6\linewidth}
+\Huge \color{2} {The search of new Higgs boson} \color{Black}\\ % Title
+%\Huge\textit{}
+\\[1cm] % Subtitle
+\large \textbf{Marta Sawko and Grzegorz Czelusta}
+\\[0.5cm] % Author(s)
+University of Wrocław
+\\[0.4cm] % University/organization
+\end{minipage}
+
+\begin{minipage}[b]{0.4\linewidth}
+
+%\includegraphics[width=\linewidth]{1.png}
+\end{minipage}
+
+
+
+
+
+%\vspace{1cm} % A bit of extra whitespace between the header and poster content
+
+%----------------------------------------------------------------------------------------
+
+\begin{multicols}{2} % This is how many columns your poster will be broken into, a portrait poster is generally split into 2 columns
+\color{3} % SaddleBrown color for the introduction
+
+\section*{Introduction}
+\input{introduction.tex}
+ \begin{center}
+   \includegraphics[width=0.20\textwidth]{./feynman.pdf}
+ \end{center}
+ 
+\color{Black} % DarkSlateGray color for the rest of the content
+
+\section*{Application of Monte Carlo}
+\input{montecarlo.tex}
+
+\section*{The Method}
+
+\subsection*{Cuts and trigger}
+\input{cuts_and_trigger.tex}
+
+\subsection*{The separation}
+\input{separation.tex}
+\begin{center}
+  \includegraphics[width=0.2\textwidth]{./separacja.eps}
+\end{center}
+
+\subsection*{Background estimation}
+\input{background_estimation.tex}
+\begin{center}
+  \includegraphics[width=0.2\textwidth]{./ratio.eps}%dofitowany czerwoną, stosunek sy,ulowanych teł
+\end{center}
+
+\subsection*{Pseudodata and fit}
+\input{pseudodata_and_fit.tex}
+\begin{center}
+  \includegraphics[width=0.2\textwidth]{./statystyka.pdf}
+  %x-axis data with a given percent of signal; y-axis what program thinks the percent rage is like
+\end{center}
+
+The next step of this work is to substitute the simulated data with the original one.
+
+ %----------------------------------------------------------------------------------------
+%	REFERENCES
+%----------------------------------------------------------------------------------------
+
+%\nocite{*} % Print all references regardless of whether they were cited in the poster or not
+%\bibliographystyle{plain} % Plain referencing style
+\bibliographystyle{unsrt} % Plain referencing style
+%\bibliographystyle{apsrev4-1} % Plain referencing style
+%\bibliographystyle{} % Plain referencing style
+\bibliography{sample} % Use the example bibliography file sample.bib
+
+%----------------------------------------------------------------------------------------
+%	ACKNOWLEDGEMENTS
+%----------------------------------------------------------------------------------------
+
+%\section*{Acknowledgements}
+
+
+\end{multicols}
+\end{document}

@@ -1,0 +1,24 @@
+In order to better separate the signal and the background, we change the variables as follows. 
+We want to define new $m_{bb}'$. We will use the eigenvector $\boldsymbol{v_{extr}}$ with respect to extreme eigenvalue of the following matrix:
+\begin{equation}
+ \sum_{events} \left(
+		    \begin{array}{ccc}
+                      m_{bb}m_{bb} & m_{bb}p_{T1} & m_{bb}p_{T2}\\
+                      m_{bb}p_{T1} & p_{T1}p_{T1} & p_{T1}p_{T2}\\
+                      m_{bb}p_{T2} & p_{T1}p_{T2} & p_{T2}p_{T2}\\
+                     \end{array}
+                \right).
+\end{equation}
+We define
+\begin{equation}
+ m_{bb}'
+ =
+ \left(
+ \begin{array}{ccc}
+       m_{bb} & p_{T1} & p_{T2} 
+       \end{array}
+\right) \cdot \boldsymbol{v_{extr}}.
+\end{equation}
+Let us try to visualize the change of the variables. 
+
+

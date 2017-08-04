@@ -1,0 +1,26 @@
+\documentclass[border=3mm]{standalone}
+\usepackage{pstricks-add}
+\usepackage{pst-coil}
+\begin{document}
+\psset{arrowscale=2}
+\begin{pspicture}(-2,-2)(2.2,1.5)
+    % Particles
+    
+    \psline[linestyle=dashed](0,0)(0.7,0.7)
+    \psline[ArrowInside=->](0.7,0.7)(1.2,1.2)
+    \psline[ArrowInside=->](1.2,0.2)(0.7,0.7)
+    \psline[ArrowInside=->](-1,1)(0,0)
+    \psline[ArrowInside=->](0,0)(0,-1)
+    \pssin[periods=9,amplitude=0.1,coilarm=0](0,-1)(-1,-2)
+    \psline[ArrowInside=->](0,-1)(1.7,-2)
+    %\psline[ArrowInside=->](3,0)(4,1)
+    
+    % Labels
+    \uput[45](-0.6,0.4){$b$}
+    \uput[-45](-0.8,-1){$g$}
+    \uput[-90](1,-1){$b$}
+    \uput[135](0.5,0.25){$H$}
+    \uput[225](1.2,1.5){$b$}
+    \uput[225](1.5,0.8){$\overline{b}$}
+\end{pspicture}
+\end{document}
